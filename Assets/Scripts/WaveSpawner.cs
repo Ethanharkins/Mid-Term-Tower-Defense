@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class WaveSpawner : MonoBehaviour
-{
+public class WaveSpawner : MonoBehaviour {
 
 	public static int EnemiesAlive = 0;
 
@@ -20,7 +19,7 @@ public class WaveSpawner : MonoBehaviour
 
 	private int waveIndex = 0;
 
-	void Update()
+	void Update ()
 	{
 		if (EnemiesAlive > 0)
 		{
@@ -47,7 +46,7 @@ public class WaveSpawner : MonoBehaviour
 		waveCountdownText.text = string.Format("{0:00.00}", countdown);
 	}
 
-	IEnumerator SpawnWave()
+	IEnumerator SpawnWave ()
 	{
 		PlayerStats.Rounds++;
 
@@ -64,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
 		waveIndex++;
 	}
 
-	void SpawnEnemy(GameObject enemy)
+	void SpawnEnemy (GameObject enemy)
 	{
 		Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
 	}
