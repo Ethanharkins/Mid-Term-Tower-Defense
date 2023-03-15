@@ -4924,9 +4924,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fcd47e85925d305458b43fc25d7c07e7, type: 2}
-  - {fileID: 2100000, guid: 333382cf2aa0f6e408c0ac9be4090799, type: 2}
-  - {fileID: 2100000, guid: 0fb095ea77ca4734aa0dbb32784e33c0, type: 2}
+  - {fileID: 2100000, guid: 94b677d435c96f14db23b12b507d307b, type: 2}
+  - {fileID: 2100000, guid: 94b677d435c96f14db23b12b507d307b, type: 2}
+  - {fileID: 2100000, guid: 6aecd5f74ab4fc049a882a4cc831abf1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4996,15 +4996,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e58e17ccca86642a73d908b186c94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 15
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
+  damageOverTime: 45
   slowAmount: 0.5
   lineRenderer: {fileID: 120000012026282110}
   impactEffect: {fileID: 198000014294947900}
-  impactLight: {fileID: 108000012254394918}
+  impactLight: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 4000011689787018}
   turnSpeed: 10
@@ -5082,8 +5082,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.25490198, a: 0.38431373}
-      key1: {r: 0, g: 1, b: 0.12941177, a: 0.73333335}
+      key0: {r: 0.75565434, g: 0, b: 1, a: 0.38431373}
+      key1: {r: 0.75565434, g: 0, b: 1, a: 0.73333335}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -10079,7 +10079,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 954197a3c46626d4a84aeff17e0436f4, type: 2}
-  - {fileID: 2100000, guid: 2b6ecc7c86bfa4d47a54b97f3fdfea84, type: 2}
+  - {fileID: 2100000, guid: 94b677d435c96f14db23b12b507d307b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
