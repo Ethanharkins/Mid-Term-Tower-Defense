@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8013735548841405419}
   - component: {fileID: 8013735548841405418}
   - component: {fileID: 8013735548841405417}
+  - component: {fileID: 516670666301317553}
+  - component: {fileID: -2122525958504095452}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -97,3 +99,45 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &516670666301317553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013735548841405416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69892bf317855c4b83fc07ba19c4d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSpeed: 10
+  speed: 0
+  startHealth: 100
+  worth: 50
+  deathEffect: {fileID: 0}
+  healthBar: {fileID: 0}
+--- !u!114 &-2122525958504095452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013735548841405416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf9e892adc4b4f4884d0344afe8a24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 3512478575464110374, guid: e0a0c701b728c4e478291939f5846009, type: 3}
+  - {fileID: 1954817192324282581, guid: e12c1875cee18854e904ac8ee105abb7, type: 3}
+  - {fileID: 4203416939326298608, guid: 1f71cb29656f0b047aeb15752424f96c, type: 3}
+  - {fileID: 1090558460438408252, guid: 6b51358b8323d0345a5f67bc371f8117, type: 3}
+  - {fileID: 5831124937344191459, guid: ccbfca2dffbc94542931feb058c8fb28, type: 3}
+  - {fileID: 3702516655309948659, guid: 664b51115dca1df4aaedad62371c6a7e, type: 3}
+  - {fileID: 2850455857091677655, guid: 33e15791737c58c4d89e89bbadd972d3, type: 3}
+  - {fileID: 7069869908057846357, guid: dc851f30515d7fa42955975dde8b6a36, type: 3}
+  - {fileID: 5392699576997201239, guid: 098142f3cb942de40853936b3644bf8a, type: 3}
+  - {fileID: 6532177581112065387, guid: 7b310917334be614facef9274bf40b81, type: 3}
+  moveSpeed: 10

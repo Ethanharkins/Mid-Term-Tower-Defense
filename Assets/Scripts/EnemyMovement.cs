@@ -1,51 +1,37 @@
+using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
-[RequireComponent(typeof(Enemy))]
-public class EnemyMovement : MonoBehaviour {
+public class EnemyMovement : MonoBehaviour
+{
+    public List<Transform> waypoints; // List of waypoints to be set in the Inspector
+    public float moveSpeed = 10f;
+    private int waypointIndex = 0;
 
-	private Transform target;
-	private int wavepointIndex = 0;
+    void Start()
+    {
+        if (waypoints.Count > 0)
+        {
+            transform.position = waypoints[0].position; // Start at the first waypoint
+        }
+    }
 
-	private Enemy enemy;
+    void Update()
+    {
+        Move();
+    }
 
-	void Start()
-	{
-		enemy = GetComponent<Enemy>();
+    void Move()
+    {
+        if (waypointIndex >= waypoints.Count) return; // Check if we've reached the last waypoint
 
-		target = Waypoints.points[0];
-	}
+        Vector3 target = waypoints[waypointIndex].position;
+        Vector3 dir = target - transform.position;
+        transform.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
 
-	void Update()
-	{
-		Vector3 dir = target.position - transform.position;
-		transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
-
-		if (Vector3.Distance(transform.position, target.position) <= 0.3f)
-		{
-			GetNextWaypoint();
-		}
-
-		enemy.speed = enemy.startSpeed;
-	}
-
-	void GetNextWaypoint()
-	{
-		if (wavepointIndex >= Waypoints.points.Length - 1)
-		{
-			EndPath();
-			return;
-		}
-
-		wavepointIndex++;
-		target = Waypoints.points[wavepointIndex];
-	}
-
-	void EndPath()
-	{
-		PlayerStats.Lives--;
-		WaveSpawner.EnemiesAlive--;
-		Destroy(gameObject);
-	}
-
+        // If close enough to the current waypoint, move to the next one
+        if (Vector3.Distance(transform.position, target) < 0.4f)
+        {
+            waypointIndex++;
+        }
+    }
 }
